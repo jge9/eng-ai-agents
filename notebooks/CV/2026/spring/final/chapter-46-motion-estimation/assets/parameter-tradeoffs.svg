@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#355c7d" />
+  </marker>
+  <style>
+    .title { font: 600 20px sans-serif; fill: #1f2933; }
+    .label { font: 14px sans-serif; fill: #334e68; }
+    .small { font: 12px sans-serif; fill: #486581; }
+    .box { fill: #ffffff; stroke: #cbd2d9; stroke-width: 1.5; rx: 14; }
+    .panel { fill: #f8fafc; stroke: #d9e2ec; stroke-width: 1.2; rx: 18; }
+  </style>
+</defs>
+<rect width="980" height="360" fill="#ffffff" />
+<text x="36" y="36" class="title">Three important tradeoffs</text>
+<text x="36" y="62" class="label">The notebook sweeps patch size, search radius, and noise level because each one changes reliability in a different way.</text>
+<rect x="46" y="94" width="276" height="220" class="panel"/>
+<rect x="352" y="94" width="276" height="220" class="panel"/>
+<rect x="658" y="94" width="276" height="220" class="panel"/>
+<text x="66" y="124" class="label">Patch size</text>
+<text x="372" y="124" class="label">Search radius</text>
+<text x="678" y="124" class="label">Noise level</text>
+<polyline points="82,266 124,232 166,210 208,198 250,212 292,236" fill="none" stroke="#2d6a4f" stroke-width="3"/>
+<text x="82" y="286" class="small">Too small: unstable. Too large: less local.</text>
+<polyline points="388,258 430,238 472,208 514,174 556,172 598,172" fill="none" stroke="#355c7d" stroke-width="3"/>
+<text x="388" y="286" class="small">Larger radius recovers bigger motion, but costs more.</text>
+<polyline points="694,172 736,182 778,198 820,226 862,252 904,282" fill="none" stroke="#bc4749" stroke-width="3"/>
+<text x="694" y="306" class="small">More noise usually increases endpoint error.</text>
+</svg>
