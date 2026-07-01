@@ -38,6 +38,21 @@ Key teaching figures are also saved under [`images/`](./images/), including:
 - `fig41_09_parameter_study.png`
 - `fig41_10_failure_cases.png`
 
+## Figure guide
+
+Each major figure is meant to answer one quick beginner question:
+
+- `fig41_01_homography_intuition.png`: shows one planar view mapped into another; notice that straight lines stay straight while spacing and apparent parallelism change.
+- `fig41_01_homography_intuition.png`: is the conceptual plane-to-plane view; notice the left panel is a source plane and the right panel is the same plane after a homography.
+- `fig41_02_homogeneous_coordinates.png`: shows the `(x, y) -> (x, y, 1) -> H(x, y, 1) -> (u, v, w) -> (u / w, v / w)` pipeline; notice that dividing by `w` is the step that returns to the image plane.
+- `fig41_03_dlt_pipeline.png`: shows the estimation flow from correspondences to SVD to validation; notice that the algorithm is a short linear-algebra pipeline rather than a black box.
+- `fig41_04_ransac_workflow.png` and `fig41_08_ransac_inliers_outliers.png`: show how RANSAC searches for a consensus set; notice that robust fitting depends on identifying a trustworthy subset, not explaining every point.
+- `fig41_05_checkerboard_rectification.png`: shows original, perspective-distorted, and rectified views side by side; notice how inverse warping restores a fronto-parallel layout.
+- `fig41_06_grid_transformation.png`: is the concrete before/after coordinate view; notice that it focuses on the actual point locations under `H`, not just the plane-mapping idea.
+- `fig41_07_reprojection_error.png`: shows predicted vs observed destination points; notice that the error arrow is the geometric quantity RANSAC thresholds.
+- `fig41_09_parameter_study.png`: shows contamination and threshold tradeoffs; notice where plain DLT breaks down and how threshold choice moves precision versus recall.
+- `fig41_10_failure_cases.png`: shows weak geometric coverage and overwhelming outliers; notice why some failures are easier to understand visually than numerically.
+
 ## What students can learn
 
 Students can use the notebook to understand:
